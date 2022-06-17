@@ -83,7 +83,7 @@ function SendMail(reciever, html, subject) {
     service: "gmail",
     auth: {
       user: "updates.yumtrip@gmail.com",
-      pass: "@F774b04b",
+      pass: process.env.EMAILPASS,
     },
   });
 

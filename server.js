@@ -45,7 +45,7 @@ io.on("connection", (socket) => {
 const mongoose = require("mongoose");
 const { SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS } = require("constants");
 mongoose.connect(
-  "mongodb://eatup:eatupeatup@minor-shard-00-00.1y8bd.mongodb.net:27017,minor-shard-00-01.1y8bd.mongodb.net:27017,minor-shard-00-02.1y8bd.mongodb.net:27017/eatupdb?ssl=true&replicaSet=atlas-qu1lg5-shard-0&authSource=admin&retryWrites=true&w=majority"
+  process.env.DBKEY
 );
 
 var db = mongoose.connection;
